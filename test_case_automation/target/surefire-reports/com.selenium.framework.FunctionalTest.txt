@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.selenium.framework.FunctionalTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.377 s -- in com.selenium.framework.FunctionalTest
