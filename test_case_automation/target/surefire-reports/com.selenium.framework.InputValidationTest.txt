@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.selenium.framework.InputValidationTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.185 s -- in com.selenium.framework.InputValidationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.326 s -- in com.selenium.framework.InputValidationTest

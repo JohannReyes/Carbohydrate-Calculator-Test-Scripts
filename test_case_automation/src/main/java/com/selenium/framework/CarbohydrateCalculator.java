@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class CarbohydrateCalculator {
@@ -39,6 +40,20 @@ public class CarbohydrateCalculator {
         weightField.sendKeys(Keys.TAB);
     }
 
+    public void selectGenderMale() {
+        WebElement maleGenderRd = driver.findElement(By.xpath("//label[contains(text(),'male')]"));
+        maleGenderRd.click();
+    }
+
+    public void selectGenderFemale() {
+        WebElement femaleGenderRd = driver.findElement(By.xpath("//label[contains(text(),'female')]"));
+        femaleGenderRd.click();
+    }
+
+    public void selectActivity(String activityValue) {
+        new Select(driver.findElement(By.id("cactivity"))).selectByValue(activityValue);
+    }
+
     public String getAgeValue() {
         return driver.findElement(By.id("cage")).getDomProperty("value");
     }
@@ -53,6 +68,18 @@ public class CarbohydrateCalculator {
 
     public String getWeightValue() {
         return driver.findElement(By.id("ckg")).getDomProperty("value");
+    }
+
+    public boolean isGenderMale() {
+        return driver.findElement(By.xpath("//input[@type='radio' and @name='csex' and @value='m']")).isSelected();
+    }
+
+    public boolean isGenderFemale() {
+        return driver.findElement(By.xpath("//input[@type='radio' and @name='csex' and @value='f']")).isSelected();
+    }
+
+    public String getActivity() {
+        return new Select(driver.findElement(By.id("cactivity"))).getFirstSelectedOption().getText();
     }
 
     public void clickCalcBtn() {
